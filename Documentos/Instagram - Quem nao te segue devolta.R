@@ -85,7 +85,7 @@ contas_unfollow <- sort(contas_unfollow)
  
 
 
- {r, echo=FALSE}
+
 cat("Essas sao as contas que nao te seguem devolta:",
     contas_unfollow)
  
