@@ -4,17 +4,15 @@
 <br/>
 <br/>
 
-Para dar uma forca no canal eh so acessar o link 
+Para dar uma forca no canal!
 
 
 **Canal Roda, por favor!** https://www.youtube.com/channel/UCse1qSsK5mOK9rwdkfYMcfQ
 
 
 
-
-**Github** https://github.com/roda-por-favor
-
-
-
-
 **Instagram** https://www.instagram.com/roda_por_favor
+
+
+
+![Roda, por favor!](https://raw.githubusercontent.com/roda-por-favor/Documentos/main/Roda%20por%20favor%20banner.PNG)
