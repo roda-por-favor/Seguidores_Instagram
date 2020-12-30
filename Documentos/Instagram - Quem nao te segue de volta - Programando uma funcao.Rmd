@@ -1,0 +1,188 @@
+---
+title: "Instagram - Quem nao te segue de volta? - Programando uma funcao"
+author: "Roda, por favor!"
+output: html_notebook
+---
+
+Caso voce quereira baixar o *Source code* (codigo fonte) desse *R notebook*, clique no botao no canto superior direito chamado de "code" e selecione "download RMD" :)
+
+<br/>
+<br/>
+![Creditos da imagem: Instagram](https://cdn2.vectorstock.com/i/thumb-large/97/66/follow-icon-vector-21179766.jpg)
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+### Fala pessual! Muitas pessoas tem uma preocupacao muito grande com seus seguidores nas redes sociais. Principalmente, muitas pessoas gostam de conferir se seus amigos a seguem de volta. Entretanto, muitos dos aplicativos disponibilizados por terceiros, ou nao sao confiaveis ou nao sao permitidos pelo proprio instagram. Entao, sem mais delongas vou explicar como conferir quem te segue devolta no instagram!
+
+
+### Para fazer isso acesse os seguintes botoes no seu instagram
+
+![Creditos da imagem: Instagram](https://raw.githubusercontent.com/roda-por-favor/Seguidores_Instagram/main/Imagens/Tela%20inicial%20instagram%20-%20seguidores.PNG)
+![Creditos da imagem: Instagram](https://raw.githubusercontent.com/roda-por-favor/Seguidores_Instagram/main/Imagens/Tela%20inicial%20instagram%20-%20settings.PNG)
+
+
+
+![Creditos da imagem: Instagram](https://raw.githubusercontent.com/roda-por-favor/Seguidores_Instagram/main/Imagens/instagram%20security.PNG)
+
+
+
+![Creditos da imagem: Instagram](https://raw.githubusercontent.com/roda-por-favor/Seguidores_Instagram/main/Imagens/account%20data%20instagram.PNG)
+
+
+![Creditos da imagem: Instagram](https://raw.githubusercontent.com/roda-por-favor/Seguidores_Instagram/main/Imagens/accounts%20following%20instagram.PNG)
+
+
+
+
+
+### Aqui temos as contas que nos seguimos. Selecione todas elas, depois copie e cole no R. 
+
+![Creditos da imagem: Instagram](https://raw.githubusercontent.com/roda-por-favor/Seguidores_Instagram/main/Imagens/accounts%20I%20follow%20instagram.PNG)
+
+
+### Aqui temos as contas que nos seguem... Eu ainda nao tenho nenhuma conta me seguindo ja que eu comecei o meu canal agora... Copie e cole todas as contas no R
+
+
+![Creditos da imagem: Instagram](https://raw.githubusercontent.com/roda-por-favor/Seguidores_Instagram/main/Imagens/acouonts%20following%20me%20instagram.PNG)
+
+<br/>
+<br/>
+
+### Os codigos utilizados no R
+
+
+## Pacotes necessarios:
+
+Para utilizar os codigos voce tem que ter instalado o tityverse no environment do seu R... retire a hashtag do codigo abaixo caso voce nao tenha o tidyverse instalado.
+
+```{r}
+#install.packages("tidyverse")
+```
+
+
+
+## Criando os vetores com os seguidores e quem voce esta seguindo
+
+
+Utilizando os dados voce conseguiu acessando sua conta no instagram
+
+```{r}
+# cole as contas que seguem vc aq
+
+meus_seguidores <- c("eu
+nao")
+```
+
+```{r}
+# cole as contas que vc segue aq
+
+estou_seguindo <- c("markosian
+gal_gadot
+karenxcheng
+samhairwolfryder
+siphomabona
+tom_juenemann
+instagram
+eu")
+```
+
+
+## Checando os outputs 
+
+```{r}
+estou_seguindo
+```
+```{r}
+meus_seguidores
+```
+
+## Criando a funcao
+
+```{r}
+unfollow <-
+  function(seus_seguidores,
+           estou_seguindo){
+    library(tidyverse)
+    
+    
+    seguindo <- estou_seguindo
+    seguidores <- seus_seguidores
+    
+    # Tirando os \n e transformando os valores dos seguidores em strings individuais
+    
+    seguindo <- str_split(string = seguindo, 
+                      pattern = "\n")
+    
+    seguidores <- str_split(string = seguidores, 
+                      pattern = "\n")
+    
+    #Transformando as lista em vetores
+    
+    seguindo <- seguindo[[1]]
+    seguidores <- seguidores[[1]]
+    
+   #criando um vetor com as contas para deixa de seguir
+    
+    contas_unfollow <- setdiff(seguindo, seguidores)
+    contas_unfollow <- sort(contas_unfollow)
+    
+    # Output da funcao
+    
+    cat("Essas sao as contas que nao te seguem devolta:",
+   contas_unfollow)
+    
+  }
+```
+
+
+
+```{r}
+unfollow(seus_seguidores = meus_seguidores,
+         estou_seguindo = estou_seguindo)
+```
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+## **Se voce gostou do conteudo, increva-se no canal e me siga no Github/instagram!**
+
+<br/>
+<br/>
+
+
+**Canal Roda, por favor!** https://www.youtube.com/channel/UCse1qSsK5mOK9rwdkfYMcfQ
+
+
+
+
+**Github** https://github.com/roda-por-favor
+
+
+
+
+**Instagram** https://www.instagram.com/roda_por_favor
+
+
+
+
+
+![Roda, por favor!](https://raw.githubusercontent.com/roda-por-favor/Documentos/main/Roda%20por%20favor%20banner.PNG)
+
+
+**P.S** Me desculpe por qualquer erro ortografico, meu teclado nao permite que eu use acentos nas palavras e meu computador nao tem corretor para portugues :) 
+
+Se voce estiver visualizando esse documento no R ou RStudio os "<"br/">" sao expressoes usadas para pular uma linha. 
+
+
+
+**Muito obrigado, ate a proxima!**
